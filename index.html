@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #3A2A2E;
+            font-family: 'Share Tech', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .terminal {
+            position: relative;
+            z-index: 1;
+            color: #3A2A2E;
+            padding: 20px;
+            border-radius: 5px;
+            background: rgba(237, 181, 121, 0.50);
+            backdrop-filter: blur(8px);
+        }
+        .terminal h1, .terminal p {
+            margin: 0;
+            white-space: pre;
+            overflow: hidden;
+        }
+        .terminal h1 {
+            font-size: 3em;
+            animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+        .terminal p {
+            font-size: 1.5em;
+            animation: typing 6s steps(50, end), blink-caret 0.75s step-end infinite;
+            animation-delay: 4s;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-right-color: transparent; }
+            50% { border-right-color: #3A2A2E; }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <h1>Wasteland Tails</h1>
+        <p>Loading, please wait...</p>
+    </div>
+    <audio autoplay loop>
+        <source src="loop.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
